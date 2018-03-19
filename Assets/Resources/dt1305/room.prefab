@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1053137007898542}
+  m_IsPrefabParent: 1
+--- !u!1 &1053137007898542
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4607883327481100}
+  - component: {fileID: 114483426576681426}
+  m_Layer: 0
+  m_Name: room
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4607883327481100
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1053137007898542}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114483426576681426
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1053137007898542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a1754b5717144045aa6c2fbaa3621f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roomAuthor: 
+  designedRoomFile: {fileID: 0}
+  localTilePrefabs:
+  - {fileID: 1986789405579324, guid: 87acb8fa4948cff4f8b8c009b40f9b02, type: 2}
+  - {fileID: 1920895841137460, guid: bd24b8cc3934c2841b2bfd9694f42da0, type: 2}
+  - {fileID: 1228583247517506, guid: 0d67fae9f024f66478ba51e7e406aea5, type: 2}
+  - {fileID: 1079361685377222, guid: cdd78d35239a99241ae259263f5417dc, type: 2}
+  - {fileID: 1781302445510578, guid: cfd6546f3904642f1bbaddf9fe7ced93, type: 2}
+  - {fileID: 1097009321995878, guid: 7f119146519d742d7953341b07580643, type: 2}
+  - {fileID: 1387771116485768, guid: e4d00d2fcd2614042856187fc264cd0d, type: 2}
+  - {fileID: 1387771116485768, guid: 6456bcd08f60844ac9af9162bc3ce7cb, type: 2}
+  roomGridX: 0
+  roomGridY: 0
+  designedRoomFiles:
+  - {fileID: 4900000, guid: aeddb65806780be41a01da1a372065f9, type: 3}
+  - {fileID: 4900000, guid: 02ae47f25ee77274eacf48727d276c36, type: 3}
+  - {fileID: 4900000, guid: 9349df45af705fc4bbd67f18be42d4c4, type: 3}
+  - {fileID: 4900000, guid: 361dc8b04acd23044b96aebff1f0767a, type: 3}
+  - {fileID: 4900000, guid: b096a2c83d89eb242919a9eb896470d1, type: 3}
+  - {fileID: 4900000, guid: d4ad5245e49f92e4da5cc968b9a9cb87, type: 3}
