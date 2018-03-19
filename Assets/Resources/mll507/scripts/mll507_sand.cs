@@ -14,14 +14,14 @@ public class mll507_sand : Tile
 	{
 		if (!been_added)
 		{
-			GameManager.instance.sands.Add(this);
+			transform.parent.gameObject.GetComponent<mll507_room>().sands.Add(this);
 			been_added = true;
 		}
 	}
 	
 	protected override void die()
 	{
-		GameManager.instance.sands.Remove(this);
+		transform.parent.gameObject.GetComponent<mll507_room>().sands.Remove(this);
 		
 		_alive = false;
 
@@ -40,28 +40,37 @@ public class mll507_sand : Tile
 	
 	void OnTriggerEnter2D(Collider2D otherCollider)
 	{
-		Tile other_tile = otherCollider.GetComponent<Tile>();
-
-		if (other_tile.hasTag(TileTags.Player))
+		if (!otherCollider.gameObject.CompareTag("Respawn"))
 		{
-			Player play = otherCollider.GetComponent<Player>();
-			original_speed = play.moveSpeed;
-			play.moveSpeed *= (1f/move_speed_cut);
+			Tile other_tile = otherCollider.GetComponent<Tile>();
+
+			if (other_tile != null && other_tile.hasTag(TileTags.Player))
+			{
+				Player play = otherCollider.GetComponent<Player>();
+				original_speed = play.moveSpeed;
+				play.moveSpeed *= (1f/move_speed_cut);
+			}
 		}
+		
 	}
 
 	void OnTriggerExit2D(Collider2D otherCollider)
 	{
-		Tile other_tile = otherCollider.GetComponent<Tile>();
 
-		if (other_tile.hasTag(TileTags.Player))
+		if (!otherCollider.gameObject.CompareTag("Respawn"))
 		{
-			Player play = otherCollider.GetComponent<Player>();
-			play.moveSpeed = original_speed;
-			takeDamage(other_tile, 1);
-		} else if (other_tile.hasTag(TileTags.Creature))
-		{
-			takeDamage(other_tile, 1);
+			Tile other_tile = otherCollider.GetComponent<Tile>();
+
+			if (other_tile != null && other_tile.hasTag(TileTags.Player))
+			{
+				Player play = otherCollider.GetComponent<Player>();
+				play.moveSpeed = original_speed;
+				takeDamage(other_tile, 1);
+			} else if (other_tile != null && other_tile.hasTag(TileTags.Creature))
+			{
+				takeDamage(other_tile, 1);
+			}
 		}
+		
 	}
 }

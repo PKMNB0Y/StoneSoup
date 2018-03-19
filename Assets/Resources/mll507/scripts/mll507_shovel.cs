@@ -110,17 +110,17 @@ public class mll507_shovel : Tile {
 			{
 				
 				// NEED TO FIX THIS UP
-				Vector3 spawn_pos = otherTile.transform.position;
+				Vector2 spawn_pos = toGridCoord(otherTile.localX, otherTile.localY);
+				Vector2 new_pos = otherTile.transform.position;
 				GameObject room = otherTile.transform.parent.gameObject;
 				otherTile.takeDamage(this, otherTile.health);
 
 				
-				Tile new_hole = spawnTile(hole_prefab, room.transform, room.GetComponent<Room>().roomGridX, room.GetComponent<Room>().roomGridY);
-				Tile new_sand_gren = spawnTile(sand_gren_prefab, room.transform, room.GetComponent<Room>().roomGridX,
-					room.GetComponent<Room>().roomGridY);
+				Tile new_hole = spawnTile(hole_prefab, room.transform, (int) spawn_pos.x, (int) spawn_pos.y);
+				Tile new_sand_gren = spawnTile(sand_gren_prefab, room.transform, (int) spawn_pos.x, (int) spawn_pos.y);
 				
-				new_hole.transform.SetPositionAndRotation(spawn_pos, Quaternion.identity);
-				new_sand_gren.transform.SetPositionAndRotation(spawn_pos, Quaternion.identity);
+				//new_hole.transform.SetPositionAndRotation(new_pos, Quaternion.identity);
+				//new_sand_gren.transform.SetPositionAndRotation(new_pos, Quaternion.identity);
 				new_sand_gren.gameObject.GetComponent<mll507_sand_grenade>().from_hole(_tileHoldingUs);
 
 

@@ -6,7 +6,7 @@ public class mll507_small_wall : Tile {
 
 	// Walls only take explosive damage.
 	public override void takeDamage(Tile tileDamagingUs, int amount, DamageType damageType) {
-		if (damageType == DamageType.Explosive) {
+		if (damageType == DamageType.Normal) {
 			base.takeDamage(tileDamagingUs, amount, damageType);
 		}
 	}
