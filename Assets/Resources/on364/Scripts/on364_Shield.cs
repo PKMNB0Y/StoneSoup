@@ -61,6 +61,7 @@ public class on364_Shield : Tile {
         {
             Destroy(this.gameObject);
         }
+        tileName = "Black Shield: " + health + " HP";
     }
 
     void FixedUpdate () {
@@ -81,7 +82,7 @@ public class on364_Shield : Tile {
 
     public virtual void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.GetComponent<Tile>() != null)
+        if (collision.gameObject.GetComponent<Tile>() != null && !collision.gameObject.GetComponent<Tile>().hasTag(TileTags.Wall))
         {
             float impact = collisionImpactLevel(collision);
             if (impact < damageThreshold)
