@@ -35,7 +35,7 @@ public class heal_tile : Tile {
 	void OnTriggerEnter2D(Collider2D otherCollider)
 	{
 		tileOnMe = otherCollider.GetComponent<Tile>();
-		if (tileOnMe != null && tileOnMe.hasTag(TileTags.Player))
+		if (tileOnMe != null && (tileOnMe.hasTag(TileTags.Player) || tileOnMe.tileWereHolding.hasTag(TileTags.Player)))
 		{
 			triggered = true;
 			standTime = Time.time;

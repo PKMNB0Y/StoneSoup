@@ -137,8 +137,8 @@ MonoBehaviour:
   heldAngle: 0
   tileWereHolding: {fileID: 0}
   aimDirection: {x: 0, y: 0}
-  swingSound: {fileID: 0}
-  pickupSound: {fileID: 0}
+  swingSound: {fileID: 8300000, guid: 2940c3ebcb86849aa84a3ff4b1bf2a46, type: 3}
+  pickupSound: {fileID: 8300000, guid: c39f4e4d5900a4ce5a42c324bd77c7f4, type: 3}
   swingPivot: {fileID: 4389110508847216}
   sand_gren_prefab: {fileID: 1015684097528326, guid: 0c58ce70121893a439454ba9b351d2a6,
     type: 2}

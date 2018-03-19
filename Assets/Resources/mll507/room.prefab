@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4314198860773260}
-  - component: {fileID: 114111420572063882}
+  - component: {fileID: 114512548255975250}
   m_Layer: 0
   m_Name: room
   m_TagString: Untagged
@@ -40,7 +40,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114111420572063882
+--- !u!114 &114512548255975250
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -48,16 +48,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 1440651164045582}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9fda1be0f47f4d2eb0cd4977c7295a1, type: 3}
+  m_Script: {fileID: 11500000, guid: 082897aac2bf7de4db3f0059b7f4118a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   roomAuthor: Mattias Lambert
-  designedRoomFile: {fileID: 4900000, guid: fde6ad4f60ae3884c9595111cabda0d4, type: 3}
+  designedRoomFile: {fileID: 0}
   localTilePrefabs:
-  - {fileID: 1922504690214426, guid: 1949b495ad449a0489b882d5d9e4c543, type: 2}
   - {fileID: 1761707255187452, guid: a56b94456eabab646902840703d26914, type: 2}
+  - {fileID: 1922504690214426, guid: 1949b495ad449a0489b882d5d9e4c543, type: 2}
   - {fileID: 1015684097528326, guid: 0c58ce70121893a439454ba9b351d2a6, type: 2}
+  - {fileID: 1858715620905558, guid: 91267be40cd18d141aeed7bafe55f289, type: 2}
   - {fileID: 1850415262744784, guid: 83f2aba977350a14aa11fb08a6a7bae5, type: 2}
+  - {fileID: 1781302445510578, guid: e528169e05dd14af1aa29b5a033465fb, type: 2}
   - {fileID: 1605743955424172, guid: 1bc1e3132503e9a48b882519f265ca26, type: 2}
+  - {fileID: 1149973688656150, guid: ca6747db80bd0544390623d0485b1f3b, type: 2}
+  - {fileID: 1662355388308800, guid: 31f6825f9b6ca8f44a62d300caeac694, type: 2}
+  - {fileID: 1403095745553274, guid: e0d6a3e1f97f7421ba2b1904d29efd99, type: 2}
   roomGridX: 0
   roomGridY: 0
+  emptySpaceChance: 0.2
+  blockExitChance: 0.4
+  borderWallProbability: 0.8
+  restockChance: 0.3
+  flipperChance: 0.2
+  enemyChance: 0.25
+  sands: []

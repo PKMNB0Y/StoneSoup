@@ -104,9 +104,9 @@ public class mll507_sand_grenade : Tile {
 		{
 			print("spawning hole");
 			GameObject room = transform.parent.gameObject;
-			Tile new_hole = spawnTile(sand_prefab, room.transform, room.GetComponent<Room>().roomGridX,
-				room.GetComponent<Room>().roomGridY);
-			new_hole.transform.SetPositionAndRotation(new Vector3(transform.position.x, transform.position.y, 0), Quaternion.identity);
+			Vector2 grid_c = toGridCoord(localX, localY);
+			Tile new_hole = spawnTile(sand_prefab, room.transform, (int) grid_c.x, (int) grid_c.y);
+			//new_hole.transform.SetPositionAndRotation(new Vector3(transform.position.x, transform.position.y, 0), Quaternion.identity);
 			new_hole.sprite.sortingLayerID = SortingLayer.NameToID("Floor");
 			die();
 		}
@@ -132,9 +132,9 @@ public class mll507_sand_grenade : Tile {
 			
 			//Vector2 grid_cord = toGridCoord(localX, localY);
 			print("spawning sand");
-			GameObject room = _tileThatThrewUs.transform.gameObject;
-			Tile new_sand = spawnTile(sand_prefab, room.transform, room.GetComponent<Room>().roomGridX,
-				room.GetComponent<Room>().roomGridY);
+			GameObject room = transform.parent.gameObject;
+			Vector2 grid_c = toGridCoord(localX, localY);
+			Tile new_sand = spawnTile(sand_prefab, room.transform, (int) grid_c.x, (int) grid_c.x);
 			new_sand.transform.SetPositionAndRotation(transform.position, Quaternion.identity);
 			new_sand.sprite.sortingLayerID = SortingLayer.NameToID("Floor");
 			die();

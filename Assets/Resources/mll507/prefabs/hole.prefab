@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ba82285e9880524b95501af9dac6479, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tags: 4096
+  tags: 0
   tileName: hole
   health: 10000
   deathEffect: {fileID: 0}
