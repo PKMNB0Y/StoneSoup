@@ -21,7 +21,6 @@ public class GameManager : MonoBehaviour {
 	///////////////////
 	// PREFABS GO HERE
 
-
 	// END PREFABS
 	///////////////////
 
@@ -31,6 +30,7 @@ public class GameManager : MonoBehaviour {
 
 	public LetterBox letterBox; // Used by single room mode to make sure we only see one room at a time.
 
+	public List<mll507_sand> sands;
 
 	// END PUBLIC REFERENCE OBJECTS
 	///////////////////////////////////
@@ -74,6 +74,7 @@ public class GameManager : MonoBehaviour {
 		Application.targetFrameRate = 60;
 		_instance = this;
 		levelGenerator.generateLevel();
+		sands = new List<mll507_sand>();
 	}
 
 	public void Start() {

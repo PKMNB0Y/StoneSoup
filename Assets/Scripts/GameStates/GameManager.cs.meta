@@ -3,8 +3,15 @@ guid: 42786a9ae9bd9479a9a82298ec4c4a9a
 timeCreated: 1483661813
 licenseType: Pro
 MonoImporter:
+  externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - hole_prefab: {fileID: 1761707255187452, guid: a56b94456eabab646902840703d26914,
+      type: 2}
+  - levelGenerator: {instanceID: 0}
+  - letterBox: {instanceID: 0}
+  - currentRoom: {instanceID: 0}
+  - borderObjects: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

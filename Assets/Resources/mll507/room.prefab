@@ -54,6 +54,10 @@ MonoBehaviour:
   roomAuthor: Mattias Lambert
   designedRoomFile: {fileID: 4900000, guid: fde6ad4f60ae3884c9595111cabda0d4, type: 3}
   localTilePrefabs:
-  - {fileID: 1149973688656150, guid: ca6747db80bd0544390623d0485b1f3b, type: 2}
+  - {fileID: 1922504690214426, guid: 1949b495ad449a0489b882d5d9e4c543, type: 2}
+  - {fileID: 1761707255187452, guid: a56b94456eabab646902840703d26914, type: 2}
+  - {fileID: 1015684097528326, guid: 0c58ce70121893a439454ba9b351d2a6, type: 2}
+  - {fileID: 1850415262744784, guid: 83f2aba977350a14aa11fb08a6a7bae5, type: 2}
+  - {fileID: 1605743955424172, guid: 1bc1e3132503e9a48b882519f265ca26, type: 2}
   roomGridX: 0
   roomGridY: 0
