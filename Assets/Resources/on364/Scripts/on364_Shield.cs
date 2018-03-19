@@ -8,6 +8,7 @@ public class on364_Shield : Tile {
 	public Sprite heldSpr, onGroundSpr;
 
 	public float cooldownTimer;
+    public float damageThreshold = 4;
 
 	public override Collider2D mainCollider {
 		get { return groundCollider; }
@@ -56,6 +57,10 @@ public class on364_Shield : Tile {
         {
             cooldownTimer -= Time.deltaTime;
         }
+        if (this.health < 1)
+        {
+            Destroy(this.gameObject);
+        }
     }
 
     void FixedUpdate () {
@@ -73,4 +78,19 @@ public class on364_Shield : Tile {
 		_tileHoldingUs.addForce (tileUsingUs.aimDirection.normalized * 2500);
 		cooldownTimer = 2.0f;
 	}
+
+    public virtual void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.GetComponent<Tile>() != null)
+        {
+            float impact = collisionImpactLevel(collision);
+            if (impact < damageThreshold)
+            {
+                return;
+            }
+            Tile otherTile = collision.gameObject.GetComponent<Tile>();
+            otherTile.takeDamage(this, 2);
+            this.health -= 1;
+        }
+    }
 }
